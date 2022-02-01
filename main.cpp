@@ -35,11 +35,11 @@ int main()
         // Update. 
 
         // Render. 
-        window.clear(sf::Color::Blue); 
+        window.clear(sf::Color::Blue); // Clearing an old frame. 
         
         /* Draw your project here. */ 
 
-        window.display();
+        window.display(); // Tell the program that the window is successfully drawn. 
     }
 
     // End of the Program. 
