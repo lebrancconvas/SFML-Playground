@@ -5,17 +5,15 @@
 #include <SFML/Network.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Window.hpp>
+#include "Game01/Game01.h"
 
 int main()
 {
-    // Init. 
-    std::string Title = "SFML Playground";
-    sf::RenderWindow window(sf::VideoMode(1920, 1200), Title, sf::Style::Titlebar | sf::Style::Close);
-    
-    sf::Event event;
+    // Init Game Engine. 
+    Game01 game01();
 
     // Loop. 
-    while(window.isOpen())
+    while(game01.running())
     {
         // Event Polling. 
         while(window.pollEvent(event))

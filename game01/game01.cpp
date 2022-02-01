@@ -1,24 +1,44 @@
-#include <iostream>
-#include <string>
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
+#include "Game01.h"
 
-int main()
+// Private Function. 
+void Game01::initVariables()
 {
-	// Init. 
+	this->window = nullptr;
+}
 
-	// Loop. 
-	while()
-	{
-		// Event Polling. 
+void Game01::initWindow()
+{
+	this->videoMode.width = 1920;
+	this->videoMode.height = 1200;
+	this->window = new sf::RenderWindow(this->videoMode, "The Return of Wong", sf::Style::Titlebar | sf::Style::Close);
+}
 
-		// Update. 
+// Constructor / Destructor. 
+Game01::Game01()
+{
+	this->initVariables();
+	this->initWindow();
+}
 
-		// Render. 
-	}
+Game01::~Game01()
+{
+	delete this->window;
+}
 
- 	return 0;
+// Accessors.
+const bool Game01::running() const 
+{
+	return this->window->isOpen();
+}
+
+
+// Function. 
+void Game01::update()
+{
+ 
+}
+
+void Game01::render()
+{
+
 }
