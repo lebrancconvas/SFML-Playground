@@ -1,24 +1,48 @@
+#include <iostream>
+#include <string>
 #include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Network.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Window.hpp>
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Playground.");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    // Init. 
+    std::string Title = "SFML Playground";
+    sf::RenderWindow window(sf::VideoMode(1920, 1200), Title, sf::Style::Titlebar | sf::Style::Close);
+    
+    sf::Event event;
 
-    while (window.isOpen())
+    // Loop. 
+    while(window.isOpen())
     {
-        sf::Event event;
-        while (window.pollEvent(event))
+        // Event Polling. 
+        while(window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed)
-                window.close();
+            switch(event.type)
+            {
+                case sf::Event::Closed:
+                    window.close();
+                    break;
+                case sf::Event::KeyPressed:
+                    if(sf::Keyboard::Escape)
+                        window.close();
+                    break;
+            }
         }
 
-        window.clear();
-        window.draw(shape);
+        // Update. 
+
+        // Render. 
+        window.clear(sf::Color::Blue); 
+        
+        /* Draw your project here. */ 
+
         window.display();
     }
+
+    // End of the Program. 
 
     return 0;
 }
