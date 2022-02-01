@@ -8,6 +8,17 @@
 
 int main()
 {
-	std::cout << "Hello Game 01." << std::endl;
+	// Init. 
+
+	// Loop. 
+	while()
+	{
+		// Event Polling. 
+
+		// Update. 
+
+		// Render. 
+	}
+
  	return 0;
 }
