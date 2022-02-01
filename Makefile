@@ -1,2 +1,2 @@
-run:
-	g++ main.cpp -I /opt/homebrew/Cellar/sfml/2.5.1_1/include -L /opt/homebrew/Cellar/sfml/2.5.1_1/lib -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo -o main && main
+file:
+	g++ main.cpp -I /opt/homebrew/Cellar/sfml/2.5.1_1/include -L /opt/homebrew/Cellar/sfml/2.5.1_1/lib -l sfml-window -l sfml-system -l sfml-graphics -l sfml-network -l sfml-audio -o main.o && ./main
