@@ -1,3 +1,5 @@
 *
-!*.cpp
 !Makefile
+!README.md
+!/**/
+!*.cpp
